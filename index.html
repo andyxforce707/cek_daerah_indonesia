@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>belajar ajax</title>
+    <script src="jquery.js"></script>
+    <script src="fnc.js"></script>
+    <script src="request.js"></script>
+    <link rel="stylesheet" href="ui.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="header">
+        <h2 class="title">Wilayah Indonesia</h2>
+      </section>
+
+      <section class="boxes">
+        <section class="box">
+          <label class="label">Provinsi : </label>
+          <select id="data-provinsi" class="data-provinsi">
+            <!-- Pilihan data provinsi -->
+          </select>
+        </section>
+
+        <section class="box">
+          <label class="label">Kabupaten : </label>
+          <select id="data-kabupaten">
+            <!-- Pilihan data kabupaten -->
+            <option class="kabupaten" value="" selected>Pilih kabupaten</option>
+          </select>
+        </section>
+
+        <section class="box">
+          <label class="label">Kecamatan : </label>
+          <select id="data-kecamatan">
+            <!-- Pilihan data kecamatan -->
+            <option class="kecamatan" value="" selected>Pilih kecamatan</option>
+          </select>
+        </section>
+      </section>
+
+      <div class="secret">
+        <div class="close"><img class="icon" src="icon/icon-hamburger.png" alt="" /></div>
+        <div class="secret-content">
+          <h3>Check my another Apps</h3>
+          <ul>
+            <li>Follow me on <a href="https://www.instagram.com/andyxforce">Instagram</a></li>
+            <li>Another <a href="andyxforce707.github.io/my_portfolio/portfolio/portfolio.html">Apps</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <footer class="footer"><span>A Website by </span><a class="link" href="https://www.instagram.com/andyxforce">@andyxforce</a></footer>
+    </div>
+
+    <script>
+      let icon = document.querySelector('.icon');
+      let secret = document.querySelector('.secret');
+      icon.addEventListener('click', function () {
+        this.classList.toggle('active');
+        if (this.classList.contains('active')) {
+          this.src = 'icon/icon-back.png';
+        } else {
+          this.src = 'icon/icon-hamburger.png';
+        }
+        secret.classList.toggle('active');
+      });
+    </script>
+  </body>
+</html>
